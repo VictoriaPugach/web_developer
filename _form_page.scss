@@ -1,0 +1,341 @@
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
+.top_form_page {
+    background: linear-gradient(180deg, rgb(0, 20, 67) 0%, rgba(208, 215, 255, 0.3) 100%), url(image/bg_hse.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 64px;
+}
+
+.form_page {
+    &__tagline{
+        margin-top: 127px;
+        padding-bottom: 127px;
+    }
+    &__box {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+    &__content {
+        flex-grow: 2;
+        flex-basis: 600px;
+    }
+    &__list-title {
+        &__item {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.5px solid #CACDD8;
+        box-sizing: border-box;
+        padding-top: 25px;
+        padding-bottom: 32px;
+    }
+
+    &__item-img {
+        width: 173px;
+        height: 173px;
+        background-size: cover;
+        margin-right: 31px;
+        &__1{
+            background-image: url(./image/study_home.jpg);
+        }
+        &__2{
+            background-image: url(./image/studsovet.jpg);
+        }
+    }
+    &__item-info {
+        display: flex;
+    }
+    &__items-button {
+        width: 200px;
+        height: 37px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        border: 1px solid #000000;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        transition: all 0.3s;
+
+    }
+    &__items-button:hover{
+        color: #ffffff;
+        background-color: #000000;
+    }
+    &__item-number {
+        height: 51px;
+        width: 71px;
+        background: #F7F6F6;
+        border-radius: 6px;
+        border-color: transparent;
+        box-sizing: border-box;
+        padding-left: 14px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #000000;
+    }
+    &__item-name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 14px;
+    }
+    &__form {
+        flex-basis: 376px;
+        height: 556px;
+        background: #F7F6F6;
+        border-radius: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            width: 379px;
+            display: flex;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            margin-top: 42px;
+            margin-bottom: 35px;
+        }
+        &__input::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+        &__input {
+            width: 288px;
+            margin-bottom: 41px;
+            margin-right: 24px;
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            font-family: 'Montserrat';
+
+            background-color: transparent;
+            border-color: transparent;
+            border-bottom: 1px solid #CACDD8;
+        }
+        &__input:focus{
+            outline: none;
+        }
+        &__total{
+            width: 379px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            justify-content: center;
+            color: #000000;
+            margin-top: 23px;
+            margin-bottom: 15px;
+        }
+        &__button{
+            width: 290px;
+            height: 41px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 20px;
+            box-sizing: border-box;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            animation: heartbeat 2s ease-in-out infinite both;
+        }
+        &__button:hover{
+            color: #ffffff;
+            background-color: #000000;
+        }
+    }
+    &__item-txt {
+        width: 276px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+        margin-bottom: 16px;
+    }
+    &__item-price {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #050505;
+        margin-bottom: 15px;
+    }
+    &__item__links {
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration-line: underline;
+        color: #000000;
+        margin-right: 30px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &__actions {
+        display: flex;
+        margin-top: 18px;
+    }
+    &__list-title {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 28px;
+        margin-left: 3px;
+        margin-bottom: 14px;
+    }
+
+}
+.form_page__form__input::placeholder{
+    font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+}
+.form_page__link__bottom{
+    margin-bottom: 64px;
+    margin-top: 33px;
+    &__item{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: #000000;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.prices__box{
+    width: 379px;
+    margin-top: 7px;
+}
+.extra{
+    &__item-name{
+        margin-top: 8px;
+    }
+}
+
+// Чтобы не отображались "кружочки" для кнопок
+.rating_round{
+    display: none;
+}
+
+.star-sign{
+    font-size: 35px;
+    color: grey;
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+
+.check{
+    color: gold;
+}

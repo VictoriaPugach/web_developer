@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=dvice-width, initial-scale=1.0" />
+    <title>gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="top__gallery  center">
+        <header class="header">
+            <a href="index.html"> <img class="logo" src="image/logo_hse_main.svg" alt="logo" /></a>
+            <!--Чтобы сделать картинку, которая является ссылкой-->
+            <form action="#">
+                <input class="search" type="text" placeholder="Поиск" />
+            </form>
+            <nav class="link_box_header">
+                <a href="gallery.html" title="Ссылка на страницу каталога" class="menu__links">Галерея</a>
+                <a href="form.html" title="Ссылка на корзину покупок" class="menu__links">Форма</a>
+            </nav>
+            <div class="menu-mobile">
+                <a href="#">
+                    <svg class= "form_page__menu" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.7515 1.99141C1.59282 3.14838 0.918906 4.70363 0.867092 6.34023C0.815278 7.97682 1.38946 9.57159 2.47264 10.7995C3.55581 12.0275 5.06645 12.7962 6.69672 12.9491C8.29727 13.0991 9.89485 12.6444 11.1757 11.6766L14.5069 15.0085L14.5069 15.0085C14.5897 15.0914 14.6881 15.1571 14.7963 15.2019C14.9046 15.2468 15.0206 15.2698 15.1377 15.2698C15.2549 15.2698 15.3709 15.2468 15.4791 15.2019C15.5873 15.1571 15.6857 15.0914 15.7685 15.0085C15.8514 14.9257 15.9171 14.8274 15.9619 14.7191C16.0068 14.6109 16.0298 14.4949 16.0298 14.3777C16.0298 14.2606 16.0068 14.1446 15.9619 14.0363C15.9171 13.9281 15.8514 13.8298 15.7685 13.7469L15.7685 13.7469L12.4368 10.416C13.4021 9.13496 13.8547 7.53846 13.7038 5.93943C13.5501 4.31054 12.7816 2.80139 11.5547 1.719C10.3277 0.636623 8.73451 0.0623154 7.09916 0.11292C5.46381 0.163525 3.90917 0.835233 2.7515 1.99141ZM2.7515 1.99141L2.82216 2.06217L2.7515 1.99141ZM10.5895 3.25366C11.0271 3.68416 11.3751 4.19703 11.6135 4.76269C11.8518 5.32835 11.9758 5.93561 11.9783 6.54944C11.9808 7.16327 11.8618 7.77152 11.628 8.3391C11.3943 8.90669 11.0505 9.42238 10.6164 9.85642C10.1824 10.2905 9.66668 10.6343 9.09909 10.868C8.53151 11.1018 7.92326 11.2208 7.30943 11.2183C6.6956 11.2158 6.08834 11.0918 5.52268 10.8535C4.95702 10.6151 4.44415 10.2671 4.01365 9.82954C3.15334 8.95509 2.67341 7.77613 2.6784 6.54944C2.6834 5.32275 3.17291 4.14773 4.04032 3.28033C4.90772 2.41292 6.08274 1.92341 7.30943 1.91841C8.53612 1.91342 9.71508 2.39335 10.5895 3.25366Z" fill="white" stroke="white" stroke-width="0.2"/>
+                    </svg>
+                </a>
+                <a href="gallery.html">
+                    <svg class= "form_page__menu" width="17" height="16" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+                </a>
+                <a href="form.html">
+                    <svg class= "form_page__menu" width="21" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Нарисую эту картинку при помощи HTML тегов, чтобы увеличить их количество) Но вообще можно было использовать и fontawesome -->
+                    <rect x="48" y="128" width="416" height="256" fill="none" stroke="white" stroke-width="32" rx="24" ry="24"/>
+                    <polyline points="48 145 256 304 464 145" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                    <line x1="112" y1="240" x2="256" y2="368" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                    <line x1="400" y1="240" x2="256" y2="368" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                    <circle cx="255" cy="300" r="35" fill="white"/>
+                    </svg>                    
+                </a>
+            </div>
+        </header>
+
+        <h1 class="tagline gallery_tagline">Галерея </h1>
+        <!-- <p class="text1">Интересные воспоминания, события и факты из жизни студентки НИУ ВШЭ. </p> -->
+    </section>
+
+    <section class="breadcrumb_navigation center">
+        <nav class="breadcrumb">
+            <ul>
+                <li><a class="bc_navigation" href="index.html">Главная</a></li>
+                <li><a class="bc_navigation" href="gallery.html">Форма</a></li>
+            </ul>
+        </nav>
+
+        <div class="select">
+            <select class="select__button">
+                <option value="1">Порядок: сперва новые</option>
+                <option value="2">Порядок: сперва старые</option>
+                <option value="3">Порядок: сперва интересные</option>
+            </select>
+        </div>
+
+    </section>
+
+    <section class="gallery_section center">
+
+        <div class="gallery__content__box">
+            <div class="gallery__item ">
+
+               
+
+                <div class="gallery__item__image__1 gallery__item__image">
+                 <!-- Тех, подходящий для записи кода -->
+                 <pre>
+
+
+                    
+    function factorial(n) {
+        if (n === 0) {
+            return 1;
+        } else {
+            return n * factorial(n-1);
+            }
+    }
+                  </pre>
+                </div>
+                <h3 class="photo__name">Программирование на PYTHON</h3>
+                <p class="photo__description">Python — это язык программирования, который широко используется в интернет-приложениях, разработке программного обеспечения, науке о данных и машинном обучении.</p>
+                <p class="photo__price">1 - 4 курс</p>
+            </div>
+
+            <div class="gallery__item ">
+
+
+                <div class="gallery__item__image__2 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+                <h3 class="photo__name"><bdo dir="rtl">ПЕРЕВЕРНИ свой взгляд</bdo></h3>
+                <p class="photo__description">Искусственный интеллект (ИИ) обладает потенциалом для решения некоторых из самых серьезных проблем, существующих сегодня в образовании, внедрения инноваций в практику преподавания и обучения и ускорения прогресса в достижении ЦУР 4. </p>
+                <p class="photo__price">Попробуй уже сейчас</p>
+            </div>
+
+            <div class="gallery__item ">
+
+                <!-- Не придумала, как применить этот тег -->
+                        <!-- <menu type="toolbar">
+            <li>
+             <menu label="Файл">
+               <button type="button">Новый...</button>
+               <button type="button">Открыть...</button>
+               <button type="button">Сохранить</button>
+             </menu>
+            </li>
+            <li>
+              <menu label="Правка">
+               <button type="button">Копировать</button>
+               <button type="button">Вырезать</button>
+               <button type="button">Вставить</button>
+              </menu>
+             </li>
+           </menu> -->
+
+                <div class="gallery__item__image__3 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                <h3 class="photo__name">Интеллектуальные ИГРЫ</h3>
+                <p><dfn>Интеллектуальные игры</dfn> в НИУ ВШЭ проводятся с 2002 года. </p>
+                <p class="photo__description"><i>ЧГК</i> - "Что? Где? Когда?". Спортивный вариант этой командной игры может заинтересовать многих студентов, которые всегда хотели найти способ применить свою любознательность.</p>
+                <p class="photo__price">1200 р. средняя цена игры</p>
+            </div>
+
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__4 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+
+                <h3 class="photo__name">Корпус на ПОКРЕ</h3>
+                <p class="photo__description">Самый "понтовый" корпус НИУ ВШЭ. Удобен для самостоятельного обучения, но чтобы учиться здесь на постоянной основе, придется заплатить непаленькую сумму.</p>
+                <p class="photo__price">>650 000 руб.</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__5 gallery__item__image">
+                    <code>
+
+                        <!-- В отличие от того варианта записи кода, в данном случае не сохраняются отступы -->
+                        <!-- Но и не сохраняются переносы строки.... Приходится ставить переносы вручную -->
+
+                        #include <iostream><br>
+                            #include <vector><br>
+                            
+                            int main() {<br>
+                                std::vector<size_t> nums_vasya(10), nums_petya(10);<br>
+                                std::cin >> vasya >> petya;<br>
+                                <br>
+                                while (vasya != 0) {<br>
+                                    tmp_v = vasya % 10;<br>
+
+                                    if (tmp_v == tmp_p)<br>
+                                        bulls++;<br>
+                                    else {<br>
+                                        nums_vasya[tmp_v]++;<br>
+                                    }<br>
+                                }<br>
+                                <br>
+                                for (size_t i = 0; i < 10; i++) {<br>
+                                    cows += std::min(nums_vasya[i], nums_petya[i]);
+                                }<br>
+                                <br>
+                                std::cout << bulls << "\n" << cows;<br>
+                            }<br>
+    
+                    </code>
+                </div>
+                
+                <h3 class="photo__name">Программирование на C/С++</h3>
+                    <p class="photo__description">Для записи сочетаний клавиш существует особый тег. <kbd>&lt;Ctrl&gt;+&lt;C&gt;</kbd> 
+                        и <kbd>&lt;Ctrl&gt;+&lt;V&gt;</kbd> используется для копирования и вставки элементов.
+                </p>
+                <p class="photo__price">1-2 курсы</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__6 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+            
+                <h3 class="photo__name">Научная КОНФЕРЕНЦИЯ</h3>
+                    <p class="photo__description"><u>Расписание</u></p>
+                    <p class="photo__description"><time>2023-05-12</time> официальное открытие конференции</p>
+                    <p class="photo__description"><time>2023-05-13</time> основная секция докладов</p>
+                    <p class="photo__description"><time>2023-05-14</time> официальное закрытие конференции и награждение участников</p>
+                <p class="photo__price">Участие бесплатно</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__7 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                <h3 class="photo__name">Новые ЗНАНИЯ</h3>
+            
+                       
+                <p class="photo__description">Под действием гидроксиламина альдегиды превращаются в оксимы: 
+                    СН<sub>3</sub>СНО + NH<sub>2</sub>OH = 
+                    CH<sub>3</sub>C(=NOH)H + H<sub>2</sub>O</p>
+
+                    <!-- Тег для того, чтобы если слово очень длинное, задать заранее, в каких местах слово слудет переносить, чтобы это соответствовало правилам русского языка -->
+                    <p class="photo__description">метоксихлор<wbr>диэтиламино<wbr>метил<wbr>бутил<wbr>амино<wbr>акридин</p>
+
+
+                       <p class="photo__price">420 000 руб./год</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__8 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+               
+                <h3 class="photo__name">ЗАГАДОЧНЫЕ истории</h3>
+                    <article class="photo__description">
+                        История о том, как начиная с прошлого года началось
+                         <mark>загадочное</mark> сокращение числа студентов после экзаменов по дифференциальным уравнениям. В этом году было замечено
+                         исчезновение 1 группы из 3 на втором курсе ПМ. Мы будет продолжать расследование.
+                      </article>
+                <p class="photo__price">>39 ИУПов/2 года </p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__9 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                <h3 class="photo__name">Функциональный АНАЛИЗ</h3>
+                <p class="photo__description" lang="zh-CN">
+                    <ruby>
+                     汉<rt>hàn</rt>
+                     字<rt>zì</rt>
+                    </ruby>
+
+                    <ruby>
+                        汉<rt>hàn</rt>
+                        字<rt>zì</rt>
+                       </ruby>
+                      </p>
+
+                      <p class="photo__description"><b>Великая теорема Ферма</b></p>
+                    <p class="photo__description"><i>X <sup><small>n</small></sup> + Y <sup><small>n</small></sup> 
+                        = Z <sup><small>n</small></sup></i></p>
+                       <p class="photo__description">где n - целое число > 2</p> <br>   
+                </p>
+                   
+    
+                <p class="photo__price">Дорогого стоит...</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__10 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                
+                <h3 class="photo__name">ТРЕНИРОВКА нервной системы</h3>
+                    <p class="photo__description">В данном примере делается запрос к базе данных для получения поля <var>content_title</var> 
+                        из таблицы <var>content</var>, причем должно удовлетворяться условие 
+                <p class="photo__price">10 000 нервных клеток</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__11 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                    
+                <h3 class="photo__name">Добрые ПРЕПОДАВАТЕЛИ</h3>
+                <p class="photo__description">
+                    Спасибо большое тем преподавателям, которые скрасили и продолжают скрашивать учебу в вузе!
+                </p>
+                <p class="photo__description">В результате выполнения скрипта вы увидите текст <samp>Ваш 
+                    браузер поддерживает JavaScript 1.3</samp>, в том случае, если браузер 
+                    работает с версией 1.3.</p>
+                <p class="photo__price">БЕСЦЕННО</p>
+            </div>
+
+            <div class="gallery__item ">
+                <div class="gallery__item__image__12 gallery__item__image">
+                    <!--Изображение-->
+                </div>
+
+                
+                <h3 class="photo__name">Уютные КОВОРКИНГИ</h3>
+                <p class="photo__description">Посетив многие корпуса москвоской вышки, могу выделить так называемый 
+                    <small>"Басмач"</small>, как любимое место для бота с друзьями.
+                    Ему немного уступает корпус на <small>"Покре"</small>,
+                так как в нем почти невозможно найти свободную аудиторию, в отличие от Басмача. Единственное его преимущество, он работает по ВС,
+            в отличие от Басмача.</p>
+                <p class="photo__price">Стоимость проездного: 950 руб./мес.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="more more__gallery center">
+        <a href="#" class="more__link">Показать ещё</a>
+    </section>
+
+    <footer class="center footer">
+
+        <div class="logo__footer__block">
+            <!-- <a href="index.html" class="footer__logo">ВШЭ</a>\ -->
+            <a href="index.html"> <img class="logo logo_footer" src="image/logo_hse_main.svg" alt="logo" /></a>
+
+        </div>
+
+        <div class="menu__block">
+            <h4 class="footer-heading">Страницы</h4>
+            <a class="footer__links" href="index.html" title="Ссылка на главную страницу">Главная</a>
+            <a class="footer__links" href="form.html" title="Ссылка на корзину покупок">Форма</a>
+            <a class="footer__links" href="gallery.html" title="Ссылка на страницу каталога">Галерея</a>
+        </div>
+
+        <div class="contacts__block">
+            <h4 class="footer-heading">Для связи</h4>
+            <a class="footer__links" href="#" title="Мобильный номер">+7 902 896 96 **</a>
+            <a class="footer__links" href="#" title="Почтовый адрес">vppugach@edu.hse.ru</a> 
+            <div class="footer__image-links">
+                <a href="#"> <svg class="footer__image" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0.833984C15.1698 0.833984 15.5653 0.845651 16.809 0.903984C18.0515 0.962318 18.8973 1.15715 19.6417 1.44648C20.4117 1.74282 21.0603 2.14415 21.709 2.79165C22.3022 3.37486 22.7613 4.08034 23.0542 4.85898C23.3423 5.60215 23.5383 6.44915 23.5967 7.69165C23.6515 8.93532 23.6667 9.33082 23.6667 12.5007C23.6667 15.6705 23.655 16.066 23.5967 17.3097C23.5383 18.5522 23.3423 19.398 23.0542 20.1423C22.7621 20.9214 22.303 21.627 21.709 22.2097C21.1256 22.8027 20.4202 23.2617 19.6417 23.5548C18.8985 23.843 18.0515 24.039 16.809 24.0973C15.5653 24.1522 15.1698 24.1673 12 24.1673C8.83017 24.1673 8.43467 24.1557 7.191 24.0973C5.9485 24.039 5.10267 23.843 4.35834 23.5548C3.57938 23.2625 2.87378 22.8034 2.291 22.2097C1.69764 21.6265 1.23859 20.921 0.945836 20.1423C0.656503 19.3992 0.461669 18.5522 0.403336 17.3097C0.348502 16.066 0.333336 15.6705 0.333336 12.5007C0.333336 9.33082 0.345002 8.93532 0.403336 7.69165C0.461669 6.44798 0.656503 5.60332 0.945836 4.85898C1.23778 4.07986 1.69694 3.37419 2.291 2.79165C2.87395 2.19809 3.5795 1.739 4.35834 1.44648C5.10267 1.15715 5.94734 0.962318 7.191 0.903984C8.43467 0.849151 8.83017 0.833984 12 0.833984ZM12 6.66732C10.4529 6.66732 8.96918 7.2819 7.87521 8.37586C6.78125 9.46982 6.16667 10.9536 6.16667 12.5007C6.16667 14.0477 6.78125 15.5315 7.87521 16.6254C8.96918 17.7194 10.4529 18.334 12 18.334C13.5471 18.334 15.0308 17.7194 16.1248 16.6254C17.2188 15.5315 17.8333 14.0477 17.8333 12.5007C17.8333 10.9536 17.2188 9.46982 16.1248 8.37586C15.0308 7.2819 13.5471 6.66732 12 6.66732V6.66732ZM19.5833 6.37565C19.5833 5.98888 19.4297 5.61794 19.1562 5.34445C18.8827 5.07096 18.5118 4.91732 18.125 4.91732C17.7382 4.91732 17.3673 5.07096 17.0938 5.34445C16.8203 5.61794 16.6667 5.98888 16.6667 6.37565C16.6667 6.76243 16.8203 7.13336 17.0938 7.40685C17.3673 7.68034 17.7382 7.83398 18.125 7.83398C18.5118 7.83398 18.8827 7.68034 19.1562 7.40685C19.4297 7.13336 19.5833 6.76243 19.5833 6.37565ZM12 9.00065C12.9283 9.00065 13.8185 9.3694 14.4749 10.0258C15.1313 10.6822 15.5 11.5724 15.5 12.5007C15.5 13.4289 15.1313 14.3191 14.4749 14.9755C13.8185 15.6319 12.9283 16.0007 12 16.0007C11.0717 16.0007 10.1815 15.6319 9.52513 14.9755C8.86875 14.3191 8.5 13.4289 8.5 12.5007C8.5 11.5724 8.86875 10.6822 9.52513 10.0258C10.1815 9.3694 11.0717 9.00065 12 9.00065V9.00065Z" fill="#888888"/>
+                    </svg>
+                    </a>
+                <a href="#" class="twitter"><svg class="footer__image" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.8557 3.09919C22.965 3.49317 22.0205 3.75191 21.0533 3.86686C22.0727 3.2572 22.8357 2.29771 23.2 1.16719C22.2433 1.73652 21.1945 2.13552 20.1013 2.35136C19.3671 1.5657 18.3938 1.04465 17.3328 0.869207C16.2718 0.693765 15.1826 0.873764 14.2345 1.38122C13.2864 1.88868 12.5325 2.69516 12.09 3.67528C11.6475 4.65541 11.5412 5.75427 11.7877 6.80103C9.84763 6.70379 7.94973 6.19964 6.21718 5.3213C4.48462 4.44296 2.95616 3.21008 1.73101 1.70269C1.29735 2.44755 1.06946 3.29429 1.07067 4.15619C1.07067 5.84786 1.93167 7.34236 3.24067 8.21736C2.46602 8.19297 1.70841 7.98377 1.03101 7.60719V7.66786C1.03124 8.79451 1.42111 9.88641 2.1345 10.7584C2.84789 11.6304 3.8409 12.2289 4.94517 12.4524C4.22606 12.6472 3.47203 12.676 2.74017 12.5364C3.05152 13.5061 3.65835 14.3543 4.4757 14.962C5.29305 15.5697 6.27999 15.9066 7.29834 15.9255C6.28624 16.7204 5.12738 17.308 3.88804 17.6547C2.64869 18.0014 1.35316 18.1005 0.0755081 17.9462C2.30582 19.3805 4.90212 20.142 7.55384 20.1395C16.529 20.1395 21.4372 12.7044 21.4372 6.25619C21.4372 6.04619 21.4313 5.83386 21.422 5.62619C22.3773 4.93572 23.2019 4.08038 23.8568 3.10036L23.8557 3.09919Z" fill="#888888"/>
+                    </svg>
+                    </a>
+                <a href="#"> <svg class="footer__image" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.33332 14.2218H11.25L12.4167 9.55518H8.33332V7.22184C8.33332 6.02018 8.33332 4.88851 10.6667 4.88851H12.4167V0.968509C12.0363 0.918343 10.6002 0.805176 9.08349 0.805176C5.91599 0.805176 3.66666 2.73834 3.66666 6.28851V9.55518H0.166656V14.2218H3.66666V24.1385H8.33332V14.2218Z" fill="#888888"/>
+                    </svg>
+                    </a>
+            </div>
+        </div>
+
+        <div class="footer__form">
+            <form action="#" class="form">
+                <p class="form__text">Написать студсовету</p>
+                <input class="input__mail" type="email" placeholder="Почта для связи" />
+                <button class="button" type="submit">Связь со студсоветом</button>
+            </form>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
