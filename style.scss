@@ -109,7 +109,22 @@ body {
     &:hover{
         text-decoration: none;
     }
+
+    // position: -webkit-sticky;
 }
+
+.imp{
+    background-color:pink;
+    border: 1px solid red;
+    border-radius:5px;
+    /*position: -webkit-sticky;*/
+    position: sticky;
+    top:30px;
+    
+  }
+
+
+
 
 .for__box {
     margin-top: 63px;
@@ -514,6 +529,10 @@ body {
     margin-right: 10px;
 }
 
+ol {
+    list-style-type: square;
+  }
+
 .bc_navigation {
     font-weight: 400;
     font-size: 16px;
@@ -656,6 +675,65 @@ body {
 .menu-mobile{
     display: none;
 }
+
+
+#smthFree{
+    background-color:rgb(248, 228, 78);
+  }
+
+h5 {
+    animation-delay: 0s, 0s, 6s;
+    animation-duration: 6s, 2s, 5s;
+    animation-name: slidein, anim_color, fadeOut;
+    animation-iteration-count: 1, 3, 1;
+    animation-direction: alternate;
+    
+    /*animation: 5s infinite alternate slidein;*/
+}
+
+@keyframes slidein { 
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+    
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+  }
+  
+  @keyframes fadeOut { 
+    from {
+      opacity:1;
+    }
+  
+    to {
+      opacity:0;
+    }
+  
+  }
+  
+  @keyframes anim_color { 
+    from {
+      color:inherit;
+    }
+  
+    to {
+      font-width: bolder;
+      color:red;
+    }
+    
+    75% {
+      color:green;
+    }
+  }
 
 /*Корзина*/
 
