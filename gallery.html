@@ -5,11 +5,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=dvice-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/55081ed15b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -108,24 +109,6 @@
             </div>
 
             <div class="gallery__item ">
-
-                <!-- Не придумала, как применить этот тег -->
-                        <!-- <menu type="toolbar">
-            <li>
-             <menu label="Файл">
-               <button type="button">Новый...</button>
-               <button type="button">Открыть...</button>
-               <button type="button">Сохранить</button>
-             </menu>
-            </li>
-            <li>
-              <menu label="Правка">
-               <button type="button">Копировать</button>
-               <button type="button">Вырезать</button>
-               <button type="button">Вставить</button>
-              </menu>
-             </li>
-           </menu> -->
 
                 <div class="gallery__item__image__3 gallery__item__image">
                     <!--Изображение-->
@@ -314,6 +297,51 @@
 
     </section>
 
+
+
+    <section class = "chat_section">
+        <div id="chat_div" class="chat_div">
+            <div  class="chat_text_div">
+                <h3> Чат с автором</h3> 
+                <i style="font-size: 25px;" id="close_btn" class="fa-solid fa-circle-xmark close"></i>
+            </div>
+          
+            <div class="chat_text_answers" id="chat_text_answers">
+                <div class="left"> 
+                    <div class="bubble bubble_left">
+                        Привет! <br>
+                        Задай свой вопрос!
+                    </div>
+                </div>
+
+                <div class="right"> 
+                    <div class="bubble bubble_right">
+                        Привет!
+                    </div>
+                </div>
+
+                <!-- Будут создаваться такие файлы -->
+                <div class="right"> 
+                    <!-- <div id="recordingStatus">Press and hold the micro to record</div> -->
+
+                    <audio id="recordedAudio" class="playback"></audio>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="input_box">
+            <input id="chat_input" type="text" class="form__text chat_input" placeholder="Задайте вопрос">
+            <button id="mic" class="chat_button chat_micro mic-toggle"><i class="fa-solid fa-microphone"></i></i></button>
+            <button id="chat_button" class="chat_button chat_send" ><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+
+
+    </section>
+
+
+
     <section class="more more__gallery center">
         <a href="#" class="more__link">Показать ещё</a>
     </section>
@@ -362,6 +390,13 @@
         </div>
         
     </footer>
+
+
+    <script src="chat.js"></script>
+
+    </script>
+
+
 </body>
 
 </html>

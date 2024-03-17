@@ -1,0 +1,16 @@
+{
+  "name": "web_developer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "map_index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon map_index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "nodemon": "^3.1.0"
+  }
+}

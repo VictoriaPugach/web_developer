@@ -130,6 +130,20 @@ body {
     margin-top: 63px;
 }
 
+.map_box{
+    min-height: 200px;
+    margin-top: 63px;
+    margin-bottom: 40px;
+}
+
+.map_div{
+    margin-top: 30px;
+    min-width: 50px;
+    min-height: 500px;
+}
+
+
+
 .content_for {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -232,9 +246,9 @@ body {
         // background-image: url(./image/4.png);
         border: none
     }
-    &__5{
-        // background-image: url(./image/5.png);
-    }
+    // &__5{
+    //     // background-image: url(./image/5.png);
+    // }
     &__6{
         background-image: url(./image/www_2.jpg);
     }
@@ -573,11 +587,11 @@ ol {
     /* убираем фон */
     border: none;
     /* рамка */
-    -webkit-appearance: none;
+    // -webkit-appearance: none;
     /* Chrome */
-    -moz-appearance: none;
+    // -moz-appearance: none;
     /* Firefox */
-    appearance: none;
+    // appearance: none;
     /* убираем дефолнтные стрелочки */
     font-family: inherit;
     /* наследует от родителя */
@@ -592,7 +606,7 @@ ol {
     right: 15px;
     z-index: 1;
     margin-top: -3px;
-    background-image: url(image/select.svg);
+    // background-image: url(image/select.svg);
     width: 20px;
     height: 11px;
     background-repeat: no-repeat;
@@ -632,9 +646,9 @@ ol {
         min-height: 250px;
         background-size: cover;
         margin-bottom: 10px;
-        &__1{
-            // background-image: url(image/ai_study.jpg);
-        }
+        // &__1{
+        //     // background-image: url(image/ai_study.jpg);
+        // }
         &__2{
             background-image: url(image/ai_study.jpg);
         }
@@ -644,9 +658,9 @@ ol {
         &__4{
             background-image: url(image/building.jpg);
         }
-        &__5{
-            // background-image: url(image/smth.jpg);
-        }
+        // &__5{
+        //     // background-image: url(image/smth.jpg);
+        // }
         &__6{
             background-image: url(image/conference.jpg);
         }
@@ -737,12 +751,170 @@ h5 {
 
 /*Корзина*/
 
-/*
-<picture>
-<source media="(max-width: 767px)" srcset="photo-mobile.jpg">
-<source media="(min-width: 768px)" srcset="photo-big.jpg">
-<img src="photo-big.jpg" alt="photo">
-</picture>*/
+
+
+// NEW NEW NEW
+// Новые стили для чата с создателем сайта
+.chat_{
+    &section{
+        // padding: 7px 7px 7px 7px ;
+        display: flex;
+        // margin-top: 40px;
+        // min-height: 300px;
+
+        position: fixed;
+        top: 80px;
+        right: 10px;
+        min-width: 300px;
+        min-height: 500px;
+        // border: 3px solid #374B9B;
+        border-radius: 20px;
+
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    &div{
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        
+
+
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #C4C4C4;
+
+        min-height: 400px;
+        min-width: 200px;
+        width: inherit;
+
+
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        // margin-top: 20px;
+
+    }
+}
+
+.input_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chat_text_div{
+    min-width: 200px;
+    width: inherit;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.chat_text_answers{
+    width: 300px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.bubble{
+    background: #a2bde3;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 4px 7px 4px 7px;
+    &_right{
+        background: #bcd7ff;
+    }
+}
+
+.left{
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+
+}
+
+.chat_button{
+    min-width: 50px;
+    min-height: 46px;
+    background: #7DA0D2;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.3s;
+
+    &:hover{
+        color: #FFFFFF;
+        background: #000000;
+    }
+}
+
+.chat_micro{
+    font-size: 25px;
+}
+
+.is-recording{
+    background: #ff0000;
+}
+
+.close{
+    transition: all 0.2s;
+
+    &:hover{
+        color: #6a6a6a;
+        background: #ffffff;
+
+    }
+}
+
+.chat_input{
+    height: 46px;
+    color: #050505;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 12px;
+
+&::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    // color: #FFFFFF;
+}
+}
+
+.chat_closed{
+    display: none;
+}
+
+.chat_window_closed{
+    min-height: min-content;
+}
+
+.hidden{
+    display: none;
+}
 
 @import 'form_page';
 @import 'tablet';
