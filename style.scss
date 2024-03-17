@@ -870,10 +870,6 @@ h5 {
     font-size: 25px;
 }
 
-.is-recording{
-    background: #ff0000;
-}
-
 .close{
     transition: all 0.2s;
 
@@ -918,6 +914,10 @@ h5 {
 
 .hidden{
     display: none;
+}
+
+.is_recording{
+    background: #ff0000;
 }
 
 @import 'form_page';
