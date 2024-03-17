@@ -728,7 +728,7 @@ h5 {
 .chat_section {
   display: flex;
   position: fixed;
-  top: 80px;
+  top: 400px;
   right: 10px;
   min-width: 300px;
   min-height: 500px;
@@ -863,6 +863,10 @@ h5 {
 .chat_window_closed {
   min-height: -moz-min-content;
   min-height: min-content;
+}
+
+.chat_section_closed {
+  justify-content: flex-end;
 }
 
 .hidden {

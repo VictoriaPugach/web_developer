@@ -67,63 +67,6 @@ window.onload = function(){
   const mic_btn = document.querySelector('#mic');
   const playback = document.querySelector('.playback');
 
-  mic_btn.addEventListener('click', ToggleMic);
-
-  let can_record = false;
-  let is_recording = false;
-  let recorder = null;
-  let chuncks = [];
-
-  function SetupAudio(){
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-      .getUserMedia({
-        audio: true,
-      })
-      .then(SetupStream)
-      .catch(err => {
-        console.error(err)
-      });
-    }
-
-  }
-  SetupAudio();
-
-  function SetupStream(stream) {
-    recorder = new MediaRecorder(stream);
-
-    recorder.ondataavailable = e => {
-      chuncks.push(e.data);
-    }
-
-    recorder.onstop = e =>{
-      let blob = new Blob(chuncks, {type: "audio/webm; codecs=opus"});
-      chuncks = [];
-      let audioURL = window.URL.createObjectURL(blob);
-      playback.src = audioURL;
-    }
-    can_record = true;
-    
-  }
-
-
-  function ToggleMic(){
-    if(!can_record){
-      return
-    }
-
-    is_recording = !is_recording;
-
-    if (is_recording) {
-      recorder.start();
-      mic_btn.classList.add("is-recording");
-    } else{
-      recorder.stop();
-      mic_btn.classList.remove("is-recording");
-    }
-
-  }
-
 
   // Функции для отправки сообщений в чат
 
@@ -151,14 +94,14 @@ window.onload = function(){
       newBubble.innerText = inputChat.value; // Объединяем слова через пробел
 
       inputChat.value = "";
-
-
     }
-    
   }
 
+  // Реализация возможности закрытия окна с чатом
   const closeButton = document.getElementById('close_btn');
   const chatWindow = document.getElementById('chat_div');
+  const chatSection = document.getElementById('chat_section');
+
 
   is_closed = false;
 
@@ -171,8 +114,7 @@ window.onload = function(){
       inputChat.classList.add("hidden");
       mic_btn.classList.add("hidden");
       chatButton.classList.add("hidden");
-
-
+      chatSection.classList.add("chat_section_closed");
       is_closed = !is_closed;
     }else{
       closeButton.classList.remove("fa-arrow-up-right-from-square");
@@ -182,15 +124,131 @@ window.onload = function(){
       inputChat.classList.remove("hidden");
       mic_btn.classList.remove("hidden");
       chatButton.classList.remove("hidden");
+      chatSection.classList.remove("chat_section_closed");
       is_closed = !is_closed;
     }
   }
-
-
-
-
 };
 
+  
 
+ // АУДИО сообщение
+const display = document.querySelector('.display')
+const controllerWrapper = document.querySelector('.controllers')
 
+const State = ['Initial', 'Record', 'Download']
+let stateIndex = 0
+let mediaRecorder, chunks = [], audioURL = ''
 
+// mediaRecorder setup for audio
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+    console.log('mediaDevices поддерживаются вашим браузером...')
+
+    navigator.mediaDevices.getUserMedia({
+        audio: true
+    }).then(stream => {
+        mediaRecorder = new MediaRecorder(stream)
+
+        mediaRecorder.ondataavailable = (e) => {
+            chunks.push(e.data)
+        }
+
+        mediaRecorder.onstop = () => {
+            const blob = new Blob(chunks, {'type': 'audio/ogg; codecs=opus'})
+            chunks = []
+            audioURL = window.URL.createObjectURL(blob)
+            document.querySelector('audio').src = audioURL
+
+        }
+    }).catch(error => {
+        console.log('Following error has occured : ',error)
+    })
+}else{
+    stateIndex = ''
+    application(stateIndex)
+}
+
+const clearDisplay = () => {
+    display.textContent = ''
+}
+
+const clearControls = () => {
+    controllerWrapper.textContent = ''
+}
+
+const record = () => {
+    stateIndex = 1
+    mediaRecorder.start()
+    application(stateIndex)
+}
+
+const stopRecording = () => {
+    stateIndex = 2
+    mediaRecorder.stop()
+    application(stateIndex)
+}
+
+const downloadAudio = () => {
+    const downloadLink = document.createElement('a')
+    downloadLink.href = audioURL
+    downloadLink.setAttribute('download', 'audio')
+    downloadLink.click()
+}
+
+const addButton = (id, funString, text) => {
+    const btn = document.createElement('button')
+    btn.id = id
+    btn.setAttribute('onclick', funString)
+    btn.textContent = text
+    controllerWrapper.append(btn)
+}
+
+const addMessage = (text) => {
+    const msg = document.createElement('p')
+    msg.textContent = text
+    display.append(msg)
+}
+
+const addAudio = () => {
+    const audio = document.createElement('audio')
+    audio.controls = true
+    audio.src = audioURL
+    display.append(audio)
+}
+
+const application = (index) => {
+    switch (State[index]) {
+        case 'Initial':
+            clearDisplay()
+            clearControls()
+
+            addButton('record', 'record()', 'Start Recording')
+            break;
+
+        case 'Record':
+            clearDisplay()
+            clearControls()
+
+            addMessage('Recording...')
+            addButton('stop', 'stopRecording()', 'Stop Recording')
+            break
+
+        case 'Download':
+            clearControls()
+            clearDisplay()
+
+            addAudio()
+            addButton('record', 'record()', 'Record Again')
+            break
+
+        default:
+            clearControls()
+            clearDisplay()
+
+            addMessage('Your browser does not support mediaDevices')
+            break;
+    }
+
+}
+
+application(stateIndex)

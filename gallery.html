@@ -299,7 +299,7 @@
 
 
 
-    <section class = "chat_section">
+    <section id="chat_section" class = "chat_section">
         <div id="chat_div" class="chat_div">
             <div  class="chat_text_div">
                 <h3> Чат с автором</h3> 
@@ -320,10 +320,17 @@
                     </div>
                 </div>
 
-                <!-- Будут создаваться такие файлы -->
-                <div class="right"> 
-                    <!-- <div id="recordingStatus">Press and hold the micro to record</div> -->
 
+                <div class="container">
+                    <div class="display">
+                    </div>
+            
+                    <div class="controllers">
+                    </div>
+                </div>
+
+                <!-- Будут создаваться такие объекты -->
+                <div class="right"> 
                     <audio id="recordedAudio" class="playback"></audio>
                 </div>
 
@@ -393,9 +400,6 @@
 
 
     <script src="chat.js"></script>
-
-    </script>
-
 
 </body>
 
