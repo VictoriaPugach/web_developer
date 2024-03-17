@@ -728,7 +728,7 @@ h5 {
 .chat_section {
   display: flex;
   position: fixed;
-  top: 400px;
+  top: 200px;
   right: 10px;
   min-width: 300px;
   min-height: 500px;
