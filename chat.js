@@ -59,12 +59,12 @@ function randomString(){
   function generateAnswer() {
     const inputChatTemp = document.getElementById('chat_input').value.toLowerCase();
 
-    if (inputChatTemp.includes('кот') || inputChatTemp.includes('кошка') || inputChatTemp.includes('котов')) {
+    if (inputChatTemp.includes('кот') || inputChatTemp.includes('кошк') || inputChatTemp.includes('мот')) {
       generateNewBubble('Коты - это хорошо!', 'left');
-    } else if (inputChatTemp.includes('никита') || inputChatTemp.includes('никит') || inputChatTemp.includes('nikita')) {
+    } else if (inputChatTemp.includes('никит') || inputChatTemp.includes('nikit')) {
       generateNewBubble('Nikita is the best!', 'left');
     } else{
-      if  (inputChatTemp.includes('привет') || inputChatTemp.includes('здравствуй') || inputChatTemp.includes('здравствуйте')) {
+      if  (inputChatTemp.includes('привет') || inputChatTemp.includes('здравствуй')|| inputChatTemp.includes('здрас')) {
         generateNewBubble('Привет-привет! Спроси меня про кота или Никиту', 'left');
       } else{
         generateNewBubble(randomString(), 'left');
