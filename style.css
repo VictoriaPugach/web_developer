@@ -1169,6 +1169,10 @@ h5 {
   color: gold;
 }
 
+.top_guestbook {
+  background: linear-gradient(180deg, rgb(0, 20, 67) 0%, rgba(208, 215, 255, 0.3) 100%), url(image/guestbook_top.png);
+}
+
 @media (min-width: 1025px) and (max-width: 1340px) {
   .center {
     padding-left: calc(50% - 470px);
