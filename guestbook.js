@@ -77,7 +77,6 @@ app.post('/action', (req, res) => {
     const name = req.body.findname;
     console.log(req.body.findname);
 
-
     const foundName = StudentModel.findOne({'Name': name}).then((docs)=> {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify({Name: docs.Name,
